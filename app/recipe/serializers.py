@@ -17,6 +17,7 @@ class IngredientSerializer(serializers.ModelSerializer):
         fields = ['id', 'name']
         read_only_fields = ['id']
 
+
 class TagSerializer(serializers.ModelSerializer):
     """Serializer for tags."""
 
@@ -92,6 +93,7 @@ class RecipeDetailSerializer(RecipeSerializer):
 
         instance.save()
         return instance
+
 
 class RecipeImageSerializer(serializers.ModelSerializer):
     """Serializer for uploading images to recipes."""

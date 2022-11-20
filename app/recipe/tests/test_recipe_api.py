@@ -70,6 +70,7 @@ class PublicRecipeAPITests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
+
 class PrivateRecipeApiTests(TestCase):
     """Test authenticated API requests."""
 
@@ -376,6 +377,7 @@ class PrivateRecipeApiTests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(recipe.ingredients.count(), 0)
+
     def test_filter_by_tags(self):
         """Test filtering recipes by tags."""
         r1 = create_recipe(user=self.user, title='Thai Vegetable Curry')
